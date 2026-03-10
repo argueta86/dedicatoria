@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Ti ❤️</title>
+
+<style>
+
+body{
+margin:0;
+padding:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#99b6ef,#ff7eb3);
+font-family:Arial;
+overflow:hidden;
+}
+
+.contenedor{
+background:rgb(242, 155, 223);
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+max-width:420px;
+animation:aparecer 2s;
+}
+
+@keyframes aparecer{
+from{opacity:0; transform:scale(0.5);}
+to{opacity:1; transform:scale(1);}
+}
+
+h1{
+color:#ff4d6d;
+}
+
+.mensaje{
+font-size:18px;
+margin-top:20px;
+color:#444;
+}
+
+button{
+margin-top:20px;
+padding:12px 20px;
+border:none;
+background:#f369e3;
+color:white;
+font-size:16px;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#92db80;
+}
+
+.final{
+display:none;
+margin-top:20px;
+animation:aparecer 2s;
+}
+
+.final img{
+width:240px;
+height:240px;
+border-radius:15%;
+margin-top:15px;
+border:5px solid #ff4d6d;
+box-shadow: 0 8px 20px rgb(0,0,0,0.3);
+object-fit: cover;
+}
+
+.final p{
+font-size:20px;
+color:#ff4d6d;
+margin-top:10px;
+}
+
+.corazon{
+position:absolute;
+color:red;
+font-size:20px;
+animation:flotar 5s linear infinite;
+}
+
+@keyframes flotar{
+0%{transform:translateY(0); opacity:1;}
+100%{transform:translateY(-800px); opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>❤️ Para el hombre que me hace suspirar ❤️</h1>
+
+<p class="mensaje">
+Desde que llegaste a mi vida todo es mejor.  
+Tu sonrisa ilumina mis días.  
+Gracias por existir. 💕
+</p>
+
+<button onclick="mostrar()">Haz clic aquí 💌</button>
+
+<div class="final" id="final">
+
+<img src="foto.jpg">
+
+<p>
+Quiero que sepas que eres muy importante para mi.    
+Espero que esta historia continúe. ❤️
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function mostrar(){
+document.getElementById("final").style.display="block";
+}
+
+function corazones(){
+
+const corazon=document.createElement("div");
+corazon.classList.add("corazon");
+
+corazon.innerHTML="❤️";
+
+corazon.style.left=Math.random()*100+"vw";
+
+corazon.style.fontSize=(Math.random()*20+10)+"px";
+
+document.body.appendChild(corazon);
+
+setTimeout(()=>{
+corazon.remove();
+},5000);
+
+}
+
+setInterval(corazones,300);
+
+</script>
+
+</body>
+</html>
