@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Para Ti ❤️</title>
+<title>Para tu 🌸</title>
 
 <style>
 
@@ -65,10 +65,10 @@ animation:aparecer 2s;
 }
 
 .final img{
-width:240px;
-height:240px;
+width:200px;
+height:200px;
 border-radius:15%;
-margin-top:15px;
+margin:10px;
 border:5px solid #ff4d6d;
 box-shadow: 0 8px 20px rgb(0,0,0,0.3);
 object-fit: cover;
@@ -80,9 +80,8 @@ color:#ff4d6d;
 margin-top:10px;
 }
 
-.corazon{
+.flor{
 position:absolute;
-color:red;
 font-size:20px;
 animation:flotar 5s linear infinite;
 }
@@ -99,23 +98,24 @@ animation:flotar 5s linear infinite;
 
 <div class="contenedor">
 
-<h1>❤️ Para el hombre que me hace suspirar ❤️</h1>
+<h1>🌸 Pequeña Su 🌸</h1>
 
 <p class="mensaje">
-Desde que llegaste a mi vida todo es mejor.  
-Tu sonrisa ilumina mis días.  
-Gracias por existir. 💕
+Eres una persona muy importante y especial,
+nunca lo olvides a pesar de todas las circunstancias
+y obstáculos que la vida te ponga, siempre confía en Dios. 🌷
 </p>
 
-<button onclick="mostrar()">Haz clic aquí 💌</button>
+<button onclick="mostrar()">Haz clic aquí 🌼</button>
 
 <div class="final" id="final">
 
 <img src="foto.jpg">
+<img src="pequeña.jpg">
 
 <p>
-Quiero que sepas que eres muy importante para mi.    
-Espero que esta historia continúe. ❤️
+Quiero que sepas que eres muy importante para mí.    
+Espero que la conosidostad que tenemos dure mucho tiempo. 🌸
 </p>
 
 </div>
@@ -128,26 +128,26 @@ function mostrar(){
 document.getElementById("final").style.display="block";
 }
 
-function corazones(){
+function flores(){
 
-const corazon=document.createElement("div");
-corazon.classList.add("corazon");
+const flor=document.createElement("div");
+flor.classList.add("flor");
 
-corazon.innerHTML="❤️";
+flor.innerHTML="🌸";
 
-corazon.style.left=Math.random()*100+"vw";
+flor.style.left=Math.random()*100+"vw";
 
-corazon.style.fontSize=(Math.random()*20+10)+"px";
+flor.style.fontSize=(Math.random()*20+10)+"px";
 
-document.body.appendChild(corazon);
+document.body.appendChild(flor);
 
 setTimeout(()=>{
-corazon.remove();
+flor.remove();
 },5000);
 
 }
 
-setInterval(corazones,300);
+setInterval(flores,300);
 
 </script>
 
